@@ -15,7 +15,7 @@ void count_of_node(struct Node* head)
     }
     struct Node* ptr = NULL;
     ptr = head;
-    while(ptr != NULL)
+    while(ptr != NULL)//Time complexity : O(n) --> n : how many time node are here in this linklist
     {
         count++;
         cout<<ptr -> data<<"\n";

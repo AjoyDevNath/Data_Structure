@@ -14,6 +14,7 @@ void count_of_node(struct Node* head)
     }
     struct Node* ptr = NULL;
     ptr = head;
+
     while(ptr != NULL)//Time complexity : O(n) --> n : how many time node are here in this link_list
     {
         count++;
@@ -21,6 +22,21 @@ void count_of_node(struct Node* head)
         ptr = ptr -> link;
     }
     cout<<"Node : "<<count<<"\n";
+}
+struct Node* adding_node_at_first(struct Node* head,int value)
+{
+    struct Node* ptr = NULL;
+    ptr = (struct Node*)malloc(sizeof(struct Node));
+    ptr -> data = value;
+    ptr -> link = head;
+    struct Node* ptr_2 = ptr;
+    while(ptr != NULL)
+    {
+        cout<<ptr -> data<<" ";
+        ptr = ptr -> link;
+    }
+    cout<<"\n";
+    return ptr_2;
 }
 int main()
 {
@@ -40,14 +56,10 @@ int main()
     current -> link = NULL;
 
     head -> link -> link = current;
-    count_of_node(head);
+    //count_of_node(head);
+    struct Node *ptr =  adding_node_at_first(head,4000);
+    count_of_node(ptr);
 
-    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
-    temp ->data = 4000;
-    temp -> link = NULL;
 
-    current -> link = temp;
-
-    count_of_node(head);
     return 0;
 }
