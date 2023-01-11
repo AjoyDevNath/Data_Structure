@@ -64,7 +64,6 @@ void del_at_pos(Node** head,int pos)
         current = NULL;
     }
 }
-
 Node* reverse(Node* head)
 {
     Node* pre = NULL;
@@ -89,6 +88,8 @@ int main()
     add_in_end(98,head);
     add_in_end(3,head);
     add_in_end(87,head);
+    add_in_end(100,head);
+    add_in_end(17,head);
     head = reverse(head);
     Node *ptr = NULL;
     ptr = new Node();
