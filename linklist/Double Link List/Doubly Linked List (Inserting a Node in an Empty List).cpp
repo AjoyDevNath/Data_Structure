@@ -1,3 +1,7 @@
+/*
+    insertion of empty link list
+    time complexity : O(1) = linear complexity
+*/
 #include<bits/stdc++.h>
 using namespace std;
 class Node
