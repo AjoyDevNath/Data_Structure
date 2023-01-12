@@ -1,3 +1,7 @@
+/*
+    Focus and more focus can reduce the time complexity!
+    time complexity : O(N),where N is the node number
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
